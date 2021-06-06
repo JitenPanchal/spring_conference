@@ -1,0 +1,37 @@
+package com.pluralsight.conference.controllers;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pluralsight.conference.model.Address;
+import com.pluralsight.conference.model.Info;
+
+@RestController
+@RequestMapping("/root")
+public class ApiController {
+
+	@GetMapping("/greetingapi")
+	private String helloapi() {
+		return "hello from api again";
+	}
+
+	@GetMapping(value = "/infoApi", produces = MediaType.APPLICATION_XML_VALUE)
+	private Info getInfo() {
+		Address add = new Address();
+		add.setCompleteAddress("ICX4 way .... :(");
+		return new Info("1", "from infor", true,add);
+	}
+	
+	
+	@GetMapping(value = "/infoFromServlet", produces = MediaType.APPLICATION_XML_VALUE)
+	private String getInfoFromServlet(HttpServletResponse res) {
+		res.setHeader("jiten", "head");
+		res.setStatus(200);
+		res.getWriter().println("");
+	}
+}

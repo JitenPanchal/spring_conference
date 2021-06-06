@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+C:\Code2\pluralsightmvcE\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+312685678.index
+4149830259.index
+438069672.index
+1807525297.index
+3882461440.index
+4094175765.index
+2544267945.index
+2630795682.index

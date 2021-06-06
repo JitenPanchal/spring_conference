@@ -1,0 +1,11 @@
+package com.pluralsight.conference.model;
+
+public class Info {
+
+	private String id;
+	private String message;
+	private boolen isSuccess;
+	
+	
+	
+}

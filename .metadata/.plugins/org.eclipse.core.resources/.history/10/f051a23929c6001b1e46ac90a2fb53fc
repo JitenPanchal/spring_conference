@@ -1,0 +1,20 @@
+package com.pluralsight.conference;
+
+
+
+@Configuration
+@EnableWebMvc
+@ComponentScan
+public class Configuration  {
+	
+	
+	@Bean
+	public ViewResolver viewResolver() {
+		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+		resolver.setPrefix("/WEB-INF/views/");
+		resolver.setSuffix(".jsp");
+		resolver.setViewClass(JstlView.class);
+		resolver.setOrder(0);
+		return resolver;
+	}
+}

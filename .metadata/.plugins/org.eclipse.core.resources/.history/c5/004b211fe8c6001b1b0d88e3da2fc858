@@ -1,0 +1,45 @@
+package com.pluralsight.conference.model;
+
+
+public class Info {
+
+	private String id;
+	private String message;
+	private boolean isSuccess;
+
+	public Info() {
+		super();
+	}
+
+	public Info(String id, String message, boolean isSuccess) {
+		super();
+		this.id = id;
+		this.message = message;
+		this.isSuccess = isSuccess;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public boolean isSuccess() {
+		return isSuccess;
+	}
+
+	public void setSuccess(boolean isSuccess) {
+		this.isSuccess = isSuccess;
+	}
+
+}

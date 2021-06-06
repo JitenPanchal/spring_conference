@@ -1,0 +1,23 @@
+package com.pluralsight.conference.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pluralsight.conference.model.Info;
+
+@RestController
+@RequestMapping("/root")
+public class ApiController {
+
+	@GetMapping("/greetingapi")
+	private String helloapi() {
+		return "hello from api again";
+	}
+	
+	
+	@GetMapping("/infoApi")
+	private Info getInfo() {
+		return new Info("1", "from infor", true);
+	}
+}

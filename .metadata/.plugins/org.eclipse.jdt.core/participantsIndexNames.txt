@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\Code2\pluralsightmvcE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4094175765.index
+\conference\src\main\java
