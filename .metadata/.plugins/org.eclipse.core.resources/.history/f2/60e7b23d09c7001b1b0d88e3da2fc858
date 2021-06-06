@@ -9,6 +9,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import com.pluralsight.conference.interceptors.LogTimeInterceptor;
+
 @org.springframework.context.annotation.Configuration
 public class Configuration implements WebMvcConfigurer {
 
@@ -33,7 +35,7 @@ public class Configuration implements WebMvcConfigurer {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		WebMvcConfigurer.super.addInterceptors(registry);
-		registry.addInterceptor(new LogTimeInterceptor()).addPathPatterns("/root/infoApi");
+		registry.addInterceptor(new LogTimeInterceptor()).addPathPatterns("/infoApi");
 	}
 
 //	@Override

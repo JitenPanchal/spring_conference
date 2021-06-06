@@ -1,0 +1,50 @@
+package com.pluralsight.conference.interceptors;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.lang.Nullable;
+import org.springframework.web.method.HandlerMethod;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+
+public class LogTimeInterceptor implements HandlerInterceptor {
+
+
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+			throws Exception {
+
+		return true;
+	}
+
+	
+	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
+			@Nullable ModelAndView modelAndView) throws Exception {
+	}
+
+	/**
+	 * Callback after completion of request processing, that is, after rendering
+	 * the view. Will be called on any outcome of handler execution, thus allows
+	 * for proper resource cleanup.
+	 * <p>Note: Will only be called if this interceptor's {@code preHandle}
+	 * method has successfully completed and returned {@code true}!
+	 * <p>As with the {@code postHandle} method, the method will be invoked on each
+	 * interceptor in the chain in reverse order, so the first interceptor will be
+	 * the last to be invoked.
+	 * <p><strong>Note:</strong> special considerations apply for asynchronous
+	 * request processing. For more details see
+	 * {@link org.springframework.web.servlet.AsyncHandlerInterceptor}.
+	 * <p>The default implementation is empty.
+	 * @param request current HTTP request
+	 * @param response current HTTP response
+	 * @param handler the handler (or {@link HandlerMethod}) that started asynchronous
+	 * execution, for type and/or instance examination
+	 * @param ex any exception thrown on handler execution, if any; this does not
+	 * include exceptions that have been handled through an exception resolver
+	 * @throws Exception in case of errors
+	 */
+	default void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler,
+			@Nullable Exception ex) throws Exception {
+	}
+
+}

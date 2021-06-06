@@ -33,7 +33,7 @@ public class Configuration implements WebMvcConfigurer {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		WebMvcConfigurer.super.addInterceptors(registry);
-		registry.addInterceptor(new LogTimeInterceptor()).addPathPatterns("/root/infoApi");
+		registry.addInterceptor(new LogTimeInterceptor()).addPathPatterns("/infoApi");
 	}
 
 //	@Override

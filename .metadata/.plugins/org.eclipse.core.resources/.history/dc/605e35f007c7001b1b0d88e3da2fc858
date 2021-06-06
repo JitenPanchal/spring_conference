@@ -1,0 +1,5 @@
+package com.pluralsight.conference.interceptors;
+
+public class LogTimeInterceptor {
+
+}
