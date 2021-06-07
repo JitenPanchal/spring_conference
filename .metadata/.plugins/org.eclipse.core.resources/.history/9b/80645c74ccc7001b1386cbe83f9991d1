@@ -1,0 +1,5 @@
+package com.pluralsight.conference.entities;
+
+public class UserDetails {
+
+}

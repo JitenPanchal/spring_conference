@@ -1,0 +1,6 @@
+package com.pluralsight.conference.validators;
+
+
+public @interface Password {
+
+}
